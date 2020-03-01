@@ -20,8 +20,13 @@
             $details = $db->prepare('SELECT * FROM memo WHERE id=? ');
             $details->execute(array($_REQUEST['id']));
             $detail = $details->fetch();
-        ?>
 
+            if(is_null($detail['id'])) {
+                // idがNULLのときエラーメッセージとして返す
+                echo "メモが存在しません";
+                exit();
+            }
+        ?>
         <div class="main">
             <p class="main_title">タイトル</p>
             <p class="input_title"> <?php echo $detail['title']; echo "<br>"; ?> </p>
@@ -40,17 +45,11 @@
         </script>
         <!-- 削除アラート ここまで-->
 
-
         <div class="button_gruop">
             <input type="submit" value="編集する" onclick="location.href='update.php?id=<?php echo($detail['id']); ?>'">
             <form class="aa" method="post" action="delete.php?id=<?php echo $detail['id']; ?>" onsubmit="return confirm_test()">
                 <input type="submit" value="削除する" onsubmit="location.href='delete.php?id=<?php echo $detail['id']; ?>'">    
             </form>
         </div>
-
-
-
-
-
     </body>
 </html>
