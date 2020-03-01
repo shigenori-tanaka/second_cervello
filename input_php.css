@@ -49,3 +49,6 @@ span{
     margin: 0 auto;
     font-size: 13px;
 }
+.main_title, .main_body{
+    color: greenyellow;
+}
