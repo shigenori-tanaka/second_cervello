@@ -30,14 +30,14 @@
         ?>
 
         <div class="main">
-            <p>タイトル</p>
+            <p class="main_title">タイトル</p>
             <p class="input-title">
                 <?php $title=$_POST['title'];
                 if(empty($title)){
                     echo "無題";
                 }   echo $_POST['title']; ?> 
             </p>
-            <p>内容</p>
+            <p class="main_body">内容</p>
             <p class="input-body"><?php echo nl2br($_POST['body']); ?></p>
         </div>
         
