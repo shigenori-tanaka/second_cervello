@@ -18,12 +18,5 @@
         <div class="menu">
             <a href="index.php">一覧（Read）</a>
         </div>
-        <div class="menu">
-            <a href="update_index.php">編集（Update）</a>
-        </div>
-        <div class="menu">
-            <a href="delete_index.php">削除（Delete）</a>
-        </div>
-        
     </body>
 </html>
