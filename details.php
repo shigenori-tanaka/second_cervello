@@ -23,9 +23,9 @@
         ?>
 
         <div class="main">
-            <p>タイトル</p>
+            <p class="main_title">タイトル</p>
             <p class="input_title"> <?php echo $detail['title']; echo "<br>"; ?> </p>
-            <p>内容</p>
+            <p class="main_body">内容</p>
             <p class="input_body">    
             <?php echo nl2br($detail['body']); ?>
             </p>
