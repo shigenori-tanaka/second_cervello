@@ -35,7 +35,7 @@
                 <input class="title-filed" type="hidden" name="id" value="<?php echo $id ?> ">
                 <input class="title-filed" type="text" name="title" value="<?php echo $memo['title'] ?>" >
                 <p>内容</p>
-                <textarea class="body-area" name="body" cols="30" rows="10"><?php echo $memo['body']; ?></textarea>
+                <textarea class="body-area" name="body" cols="30" rows="10" required><?php echo $memo['body']; ?></textarea>
                 <div class="button-group">
                     <button type="submit">更新する</button>
                 </div>
