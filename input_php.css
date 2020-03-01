@@ -1,0 +1,51 @@
+body{
+    background-color: rgba(13, 31, 91, 0.988);
+    color: white;
+}
+
+header{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.app_name{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.app_name a{
+    color: white;
+    text-decoration: none;
+}
+span{
+    color: greenyellow;
+}
+
+.brunk{
+    width: 150px;
+    border-top: 1px solid green;
+    margin: 0 auto;
+}
+.index{
+    text-align: end;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10px;
+    padding-top: 5px;
+
+}
+.index a{
+    color: white;
+}
+
+.update_message{
+    width: 90%;
+    text-align: center;
+    color: greenyellow;
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+}

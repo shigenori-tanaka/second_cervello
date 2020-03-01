@@ -1,0 +1,75 @@
+body{
+    background-color: rgba(13, 31, 91, 0.988);
+    color: white;
+}
+
+header{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.app_name{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.app_name a{
+    color: white;
+    text-decoration: none;
+}
+span{
+    color: greenyellow;
+}
+
+.brunk{
+    width: 150px;
+    border-top: 1px solid green;
+    margin: 0 auto;
+}
+
+.index{
+    text-align: end;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10px;
+    padding-top: 5px;
+
+}
+
+.index a{
+    color: white;
+}
+.form{
+    width: 80%;
+    margin: 0 auto;
+}
+.form p{
+    font-size: 13px;
+    margin: 10px 0 5px 0;
+}
+.title-filed{
+    width: 100%;
+    margin: 0 auto;
+}
+.body-area{
+    width: 100%;
+    height: 140px;
+}
+.button-group{
+    width: 100%;
+    text-align: end;
+}
+.button{
+    width: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.title{
+
+    width: 80%;
+    margin: 0 auto;
+    color: greenyellow;
+    text-align: center;
+    font-size: 13px;
+}

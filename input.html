@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="input.css">
+        <title >second cervello</title>
+    </head>
+    <body>
+        <header>
+            <h3 class="app_name"><a href="top.php">- second cervello <span>"Create"</span>-</a></h3>
+            <div class="brunk"></div>
+        </header>
+        <div class="index"> 
+           <a href="index.php">メモ一覧へ</a>
+        </div>
+
+        <!-- クリアアラート設定 ここから-->
+        <script>
+            function confirm_test() {
+            var select = confirm("内容をクリアしますか？");
+            return select;
+            }
+        </script>
+        <!-- クリアアラート設定 ここまで-->
+
+        <div class="form">
+            <form action="input.php" method="POST">
+                <p> タイトル</p>
+                <input class="title-filed" type="text" name="title" >
+                <p> 内容</p>
+                <textarea class="body-area" name="body" placeholder="内容は必ず入力してください" required></textarea>
+                <div class="button-group">
+                    <input class="button" type="submit" value="登録" >
+                    <input class="button" type="reset" value="クリア" onclick="return confirm_test()">
+                </div>
+            </form>
+        </div>
+
+        
+    </body>
+</html>

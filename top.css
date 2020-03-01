@@ -1,0 +1,37 @@
+body{
+    background-color: rgba(13, 31, 91, 0.988);
+    color: white;
+}
+
+header{
+    width: 80%;
+    margin: 0 auto;
+}
+.app_name{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+span{
+    color:greenyellow;
+}
+
+.brunk{
+    width: 150px;
+    border-top: 1px solid green;
+    margin: 0 auto;
+}
+.brunk2{
+    height: 35px;
+}
+
+.menu{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+
