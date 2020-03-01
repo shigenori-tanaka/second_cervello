@@ -16,17 +16,18 @@
         <div class="index">
             <a href="input.html">作成画面へ</a>|<a href="index.php">メモ一覧へ</a>
         </div>
+
         <?php
             $details = $db->prepare('SELECT * FROM memo WHERE id=? ');
             $details->execute(array($_REQUEST['id']));
             $detail = $details->fetch();
-
-            if(is_null($detail['id'])) {
-                // idがNULLのときエラーメッセージとして返す
-                echo "メモが存在しません";
-                exit();
-            }
         ?>
+
+        <!-- ↓idがNULLのときエラーメッセージとして返す。以降全てのプログラムを実行しない --> 
+        <?php if(is_null($detail['id'])): ?>
+            <p class="error_message"> <?php echo "メモが存在しません"; exit();?> </p>
+        <?php endif ?>
+        
         <div class="main">
             <p class="main_title">タイトル</p>
             <p class="input_title"> <?php echo $detail['title']; echo "<br>"; ?> </p>
@@ -47,7 +48,7 @@
 
         <div class="button_gruop">
             <input type="submit" value="編集する" onclick="location.href='update.php?id=<?php echo($detail['id']); ?>'">
-            <form class="aa" method="post" action="delete.php?id=<?php echo $detail['id']; ?>" onsubmit="return confirm_test()">
+            <form class="delete" method="post" action="delete.php?id=<?php echo $detail['id']; ?>" onsubmit="return confirm_test()">
                 <input type="submit" value="削除する" onsubmit="location.href='delete.php?id=<?php echo $detail['id']; ?>'">    
             </form>
         </div>
