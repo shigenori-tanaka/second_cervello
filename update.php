@@ -16,24 +16,22 @@
         <div class="index">
             <a href="index.php">メモ一覧へ</a>
         </div>
-        <?php 
+        <!-- ここから idがNULLのときエラーメッセージとして返す -->
+        <?php
             if(isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])){
-                // 値があるかつNULLでない && 数字かどうか
-                $id=$_REQUEST['id'];
-            }
-            $memos = $db->prepare('SELECT * FROM memo WHERE id=?');
-            $memos->execute(array($id));
-            $memo = $memos->fetch();
+                //空欄や文字列をはじく。数字はOK
+                $id = $_REQUEST['id'];
 
-            if(is_null($memo['id'])) {
-                // idがNULLのときエラーメッセージとして返す
-                echo "メモが存在しません";
-                exit();
+                $memos = $db->prepare('SELECT * FROM memo WHERE id=?');
+                $memos->execute(array($id));
+                $memo = $memos->fetch();
             }
         ?>
+        <?php if(is_null($memo['id'])): ?>
+            <p class="error_message"> <?php echo "メモが存在しません"; exit(); ?> </p>
+        <?php endif ?>
+        <!-- ここまで idがNULLのときエラーメッセージとして返す -->
         
-
-
         <h3 class="title">メモの編集・更新</h3>
         <div class="form">
             <form action="update_do.php" method="post">
