@@ -66,10 +66,13 @@ span{
 }
 
 .title{
-
     width: 80%;
     margin: 0 auto;
     color: greenyellow;
     text-align: center;
     font-size: 13px;
+}
+.error_message{
+    margin: 20px auto;
+    text-align: center;
 }
