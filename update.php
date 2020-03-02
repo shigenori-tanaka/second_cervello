@@ -9,23 +9,29 @@
     </head>
 
     <body>
+        <header>
+            <h3 class="app_name"><a href="top.php">- second cervello <span>"Update"</span>-</a></h3>
+            <div class="brunk"></div>
+        </header>
+        <div class="index">
+            <a href="index.php">メモ一覧へ</a>
+        </div>
         <?php 
             if(isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])){
+                // 値があるかつNULLでない && 数字かどうか
                 $id=$_REQUEST['id'];
             }
             $memos = $db->prepare('SELECT * FROM memo WHERE id=?');
             $memos->execute(array($id));
             $memo = $memos->fetch();
 
+            if(is_null($memo['id'])) {
+                // idがNULLのときエラーメッセージとして返す
+                echo "メモが存在しません";
+                exit();
+            }
         ?>
-        <header>
-            <h3 class="app_name"><a href="top.php">- second cervello <span>"Update"</span>-</a></h3>
-            <div class="brunk"></div>
-        </header>
         
-        <div class="index">
-            <a href="index.php">メモ一覧へ</a>
-        </div>
 
 
         <h3 class="title">メモの編集・更新</h3>
