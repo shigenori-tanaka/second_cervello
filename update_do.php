@@ -25,9 +25,9 @@
         <p class="title">内容を変更しました</p>
         
         <div class="form">
-            <p>タイトル</p>  
+            <p class="main_title">タイトル</p>  
             <p> <?php echo $_POST['title'];?> </p> 
-            <p>内容</p>
+            <p class="main_body"> 内容</p>
             <p>
                 <?php echo nl2br($_POST['body']); ?>
             </p>

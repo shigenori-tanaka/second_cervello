@@ -73,3 +73,6 @@ span{
     text-align: center;
     font-size: 13px;
 }
+.main_title, .main_body{
+    color: greenyellow;
+}
