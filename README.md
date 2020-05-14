@@ -25,9 +25,3 @@ Read画面でメモ一覧表を確認ができます。
 
 ### メモの編集・更新・削除
 詳細画面から選択できます。
-
-## セットアップ
-```
-$ git clone https://github.com/shigenori-tanaka/second_cervello.git
-```
-
